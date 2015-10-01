@@ -456,7 +456,7 @@ if [[ ${REDMINE_VERSION} != ${CURRENT_VERSION} ]]; then
   sudo -HEu ${REDMINE_USER} cp -a Gemfile.lock ${REDMINE_DATA_DIR}/tmp/
 
   echo "Migrating database. Please be patient, this could take a while..."
-  sudo -HEu ${REDMINE_USER} bundle exec rake db:create
+  # preco do pekla toto ??????? sudo -HEu ${REDMINE_USER} bundle exec rake db:create
   sudo -HEu ${REDMINE_USER} bundle exec rake db:migrate
 
   # clear sessions and application cache
